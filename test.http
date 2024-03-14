@@ -1,0 +1,53 @@
+### GET ALL Products
+GET http://localhost:8000/api/products HTTP/1.1
+
+### GET A PRODUCT ? public
+GET http://localhost:8000/api/product/:id HTTP/1.1
+
+### ADD A PRODUCT ? public
+POST http://localhost:8000/api/product HTTP/1.1
+content-type: application/json
+
+{
+  "name": "New product name",
+  "category": "New product category",
+  "description": "product description",
+  "image" : "url_ to product image",
+  "price": 300 ,//accepts number,
+  "rating" : 4 //accepts number
+  
+}
+
+### UPDATE A PRODUCT ? public
+PUT http://localhost:5000/api/products/:id HTTP/1.1
+content-type: application/json
+
+{
+  "category": "New product category",
+  "description": "product description",
+}
+
+### DELETE A PRODUCT ? public
+DELETE http://localhost:5000/api/products/4 HTTP/1.1
+
+
+### POST REGISTER A USER ? public
+POST http://localhost:8000/api/users/register HTTP/1.1
+
+### POST LOGIN USER? public
+GET http://localhost:8000/api/users/login HTTP/1.1
+
+{
+  "name": "John Do",
+  "email": "doo@example.com",
+  "password": "123456"
+}
+
+{
+  "name": "Fee fee",
+  "email": "fee@example.com.com",
+  "password": 123456
+}
+
+### GET A USER PROVILE ? private
+GET http://localhost:8000/api/product/:id HTTP/1.1
